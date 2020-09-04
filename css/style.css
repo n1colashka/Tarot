@@ -270,12 +270,21 @@ a {
   -webkit-transition: .5s ease;
   transition: .5s ease;
   padding: 10px;
+  overflow: auto;
 }
 
 .menu__close {
   position: absolute;
   top: 62px;
   left: 47px;
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
+  cursor: pointer;
+}
+
+.menu__close.active {
+  -webkit-transform: rotate(-180deg);
+          transform: rotate(-180deg);
 }
 
 .menu__btn {
@@ -321,29 +330,68 @@ a {
   bottom: 0;
 }
 
-.menu__list {
-  margin-left: 32px;
-}
-
-.menu__link {
-  display: inline-block;
-  font-family: Gilroy-Bold, Palatino, serif;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 20px;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  padding: 14px 24px;
-  margin-bottom: 8px;
-}
-
-.menu__link:hover {
-  color: #E29D34;
-}
-
 .menu.active {
   -webkit-transform: translateX(0);
           transform: translateX(0);
+}
+
+.menu .navigation__list {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin-left: 32px;
+  z-index: 10;
+}
+
+.menu .navigation__item {
+  position: static;
+}
+
+.menu .navigation__item:hover .navigation-menu {
+  display: none;
+}
+
+.menu .navigation__item.active .navigation-menu {
+  display: block;
+}
+
+.menu .navigation__menu {
+  width: 246px;
+  z-index: 11;
+  background-color: #fff;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+
+.menu .navigation-menu__list {
+  width: 246px;
+  z-index: 11;
+  background-color: #fff;
+  height: 100%;
+  padding: 10px;
+  -webkit-box-shadow: 0px 16px 32px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 16px 32px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+}
+
+.menu .navigation-menu__list::before {
+  display: none;
+}
+
+.menu .navigation-menu__item:hover .navigation-menu__list {
+  display: none;
+}
+
+.menu .navigation-menu__item.active .navigation-menu__list {
+  display: block;
 }
 
 .hero {
@@ -398,9 +446,6 @@ a {
 }
 
 @media (max-width: 768px) {
-  .navigation {
-    display: none;
-  }
   .menu__btn {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -411,6 +456,9 @@ a {
   }
   .header__search {
     margin-right: 0;
+  }
+  .header__navigation {
+    display: none;
   }
   .hero {
     padding: 5px;
