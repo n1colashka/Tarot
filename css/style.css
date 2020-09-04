@@ -340,6 +340,10 @@ h6 {
   margin-bottom: 32px;
 }
 
+.no-scroll {
+  overflow: hidden;
+}
+
 .header {
   display: -webkit-box;
   display: -ms-flexbox;

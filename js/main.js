@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
     var isSubMenuActive = false;
 
     menuBtn.addEventListener('click', function() {
+        document.body.classList.add('no-scroll');
         this.classList.add('active');
         menu.classList.add('active');
     });
@@ -29,6 +30,7 @@ document.addEventListener('DOMContentLoaded', function() {
             menuClose.classList.remove('active');
             isMenuActive = false;
         } else {
+            document.body.classList.remove('no-scroll');
             this.classList.add('active');
             menu.classList.remove('active');
         }
