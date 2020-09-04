@@ -1,0 +1,49 @@
+@media (max-width: 1020px) {
+    .navigation {
+        &__link {
+            display: inline-block;
+            padding: 22px 12px;
+        }
+
+        &__item {
+            margin-right: 15px;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .navigation {
+        display: none;
+    }
+
+    .menu {
+        &__btn {
+            display: flex;
+        }
+    }
+
+    .header {
+        padding: 0 10px;
+        &__search {
+            margin-right: 0;
+        }
+    }
+
+    .hero {
+        padding: 5px;
+        padding-left: 26px;
+        margin-bottom: 32px;
+    }
+
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding-left: 15px;
+        
+        &__title {
+            font-size: 44px;
+        }
+    }
+
+}
