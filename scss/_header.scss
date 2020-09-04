@@ -6,6 +6,7 @@
     padding: 0 15px;
     margin: 15px 0;
     border-radius: 8px;
+    color: #ffffff;
 
     &__search {
         margin-right: 15px;
@@ -169,6 +170,7 @@
     transition: .5s ease;
     padding: 10px;
     overflow: auto;
+    z-index: 99;
 
     &__close {
         position: absolute;

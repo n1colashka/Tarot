@@ -1,4 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
+
+    // Menu
     
     var menuBtn = document.querySelector('.menu__btn');
     var menu = document.querySelector('.menu');
@@ -13,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
         menu.classList.add('active');
     });
 
-    menuClose.addEventListener('click', function(event) {
+    menuClose.addEventListener('click', function() {
         
         if (isSubMenuActive) {
             menuSubitems.forEach(function(item) {
@@ -34,7 +36,8 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     menuItems.forEach(function(item) {
-        item.addEventListener('click', function() {
+        item.addEventListener('click', function(e) {
+            e.preventDefault();
             item.classList.add('active');
             isMenuActive = true;
             menuClose.classList.add('active');
@@ -42,11 +45,25 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     menuSubitems.forEach(function(item) {
-        item.addEventListener('click', function() {
+        item.addEventListener('click', function(e) {
+            e.preventDefault();
             item.classList.add('active');
             isSubMenuActive = true;
             menuClose.classList.add('active');
         });
+    });
+
+    // Menu/
+
+
+    // Categories menu
+
+    var categoriesMenu = document.querySelector('.categories__menu');
+    var categoriesList = document.querySelector('.categories__list');
+
+    categoriesMenu.addEventListener('click', function() {
+        this.classList.toggle('active');
+        categoriesList.classList.toggle('active');
     });
     
 });

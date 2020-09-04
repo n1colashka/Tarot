@@ -1,0 +1,58 @@
+.aside {
+    width: 250px;
+    min-width: 250px;
+    margin-left: 30px;
+
+    &__title {
+        &:first-child {
+            margin-bottom: 50px;
+        }
+    }
+
+    &__categories {
+        margin-bottom: 80px;
+    }
+
+    &__banner {
+        margin-bottom: 64px;
+    }
+
+
+}
+
+.aside-article {
+    margin-bottom: 32px;
+
+    &__img-wrapper {
+        display: block;
+        img {
+            display: block;
+        }
+    }
+
+    &__title {
+        font-size: 16px;
+        line-height: 24px;
+        margin-top: 16px;
+    }
+
+    &__info {
+        margin-top: 16px;
+    }
+
+    &__reviews {
+    }
+
+    &__date {
+        color: #393939;
+    }
+}
+
+.article-info {
+
+    &__reviews {
+    }
+
+    &__date {
+    }
+}

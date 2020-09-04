@@ -9,6 +9,7 @@
     padding: 10px;
     padding-left: 92px;
     border-radius: 8px;
+    color: #ffffff;
 
     &__title {
         font-family: $playfair-bold;
@@ -28,5 +29,11 @@
         background-color: $btn;
         border-radius: 8px;
         text-transform: uppercase;
+        transition: .3s ease;
+
+        &:hover {
+            color: $btn;
+            background-color: #fff;
+        }
     }
 }
