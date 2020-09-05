@@ -1,0 +1,30 @@
+.section-page {
+    padding-bottom: 64px;
+
+    &__article {
+        min-height: auto;
+    }
+
+    &__items {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &__title {
+        font-family: $playfair;
+        font-weight: 400;
+        font-size: 48px;
+        line-height: 58px;
+        margin-bottom: 48px;
+    }
+
+    &__text {
+        font-family: $gilroy-semibold;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 30px;
+        margin-bottom: 64px;
+    }
+}
+
+

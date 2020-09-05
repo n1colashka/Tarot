@@ -60,8 +60,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Categories menu
 
-    var categoriesMenu = document.querySelector('.categories__menu');
-    var categoriesList = document.querySelector('.categories__list');
+    var categoriesMenu = document.querySelector('.categories-mobile__menu');
+    var categoriesList = document.querySelector('.categories-mobile__list');
 
     categoriesMenu.addEventListener('click', function() {
         this.classList.toggle('active');
