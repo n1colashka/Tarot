@@ -172,6 +172,17 @@
     overflow: auto;
     z-index: 99;
 
+    .mobile-share {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        top: 20px;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+    }
+
     &__close {
         position: absolute;
         top: 62px;
@@ -229,8 +240,6 @@
     }
 
     // Menu lists
-
-    &__navigation {}
 
     .navigation {
         &__list {
@@ -291,3 +300,4 @@
         }
     }
 }
+
