@@ -299,7 +299,7 @@ h6 {
     &__list {
         display: flex;
         flex-wrap: wrap;
-        align-items: center;
+        align-items: flex-end;
         color: #393939;
         font-size: 14px;
         line-height: 20px;
@@ -313,7 +313,6 @@ h6 {
             font-family: $playfair;
             font-weight: 400;
             font-size: 16px;
-            line-height: 22px;
             color: $accent;
         }
 
